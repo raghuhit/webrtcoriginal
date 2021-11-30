@@ -21,7 +21,7 @@ jobs:
       - run: sudo xcode-select -s /Applications/Xcode_11.7.app/Contents/Developer
       - run: src/.github/bin/setup.ps1
       - run: gclient config --name=src --unmanaged "https://github.com/$GITHUB_REPOSITORY.git"
-      - run: gclient sync --deps=ios --no-history --shallow
+      - run: gclient sync --deps=ios
 
       # The build option is expected to compatible with sora-ios-sdk.
       # rtc_enable_protobuf=false suppresses the event log, which consumes lots of memory,
